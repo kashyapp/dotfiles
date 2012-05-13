@@ -1,2 +1,27 @@
-export PS1="\w$ "
-export EDITOR="mate_wait"
+export PS1='\t|\!:\#|\[\033[33m\]\w\[\033[01;32m\]\$\[\033[00m\] '
+# export EDITOR="mate_wait"
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+shopt -s cmdhist
+shopt -s histverify
+shopt -s histreedit
+shopt -s cdspell
+shopt -s checkhash
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=40000
+HISTFILESIZE=400000
+
+function lookup {
+    for i in `echo $PATH|sed 's/:/ /g'`
+    do
+    ls $i|grep -H --label="$i" -i $1
+    done
+}
+
+
