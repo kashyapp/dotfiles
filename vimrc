@@ -45,6 +45,9 @@ if has("autocmd")
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 
+  " .json should be treated as javascript
+  autocmd BufNewFile,BufRead *.json set ft=javascript
+
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
   au!
