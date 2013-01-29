@@ -1,0 +1,42 @@
+[user]
+  name = Kashyap Paidimarri
+  email = kashyapp@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit 
+  st = status
+  br = branch
+  sb = show-branch
+  df = diff --ignore-space-change
+  aa = add -A
+  ll = log --decorate --graph --abbrev-commit # --oneline
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+
+[core]
+  excludesfile = /Users/kashyapp/.gitignore_global
+  autocrlf = input
+  whitespace = -trailing-space
+
+[apply]
+  whitespace = nowarn
+
+[format]
+#  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+
+[github]
+  user = kashyapp
+  token = 
+
+[log]
+  date = local
+  decorate = short
+[branch]
+	autosetuprebase = always
