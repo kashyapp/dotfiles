@@ -11,7 +11,7 @@
   df = diff --ignore-space-change
   aa = add -A
   ll = log --decorate --graph --abbrev-commit # --oneline
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset - %ct -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 
 [color]
@@ -22,7 +22,6 @@
 
 [core]
   excludesfile = /Users/kashyapp/.gitignore_global
-  autocrlf = input
   whitespace = -trailing-space
 
 [apply]
@@ -33,10 +32,12 @@
 
 [github]
   user = kashyapp
-  token = 
 
 [log]
   date = local
   decorate = short
+  abbrevCommit
 [branch]
 	autosetuprebase = always
+[include]
+  path = ~/.gitconfig.local
