@@ -1,5 +1,9 @@
+target/
 .DS_Store
+*.iml
 .svn
 *~
 .*.swp
 .*.un~
+*.iws
+*.ipr
